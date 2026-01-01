@@ -1,85 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Abubakar Sadiq Isa -  a Freelance freelance Ionic Framework Mobile App Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My name is Abubakar. I'm a freelance Ionic Framework Mobile App Developer based in Ghana.">
-  <meta name="keywords" content="Ionic Framework, mobile apps developer, Abubakar, Sadiq, Isa, Asiddeen">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-  <link href='https://fonts.googleapis.com/css?family=Poppins:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:600,500,400,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/justifiedGallery.min.css">
-  <link rel="stylesheet" href="assets/css/lightcase.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="assets/css/vegas.min.css">
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link rel="icon" href="assets/images/logo.png">
+    <meta charset="utf-8">
+    <title>Abubakar Sadiq Isa | Ionic & Angular Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freelance Ionic Framework & Angular Mobile App Developer based in Ghana.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
 
-  <div class="wrapper">
-    <a href="/" class="logo hidden-md hidden-lg"><img src="assets/images/logo.png" width="35" height="35" alt="Logo" /></a>
-    <div class="nav-trigger" id="nav-trigger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div id="nav-menu">
-      <a href="/" class="logo"><img src="assets/images/logo.png" width="35" height="35" alt="Logo" /></a>
-      <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+        <a href="/" class="logo" aria-label="Home">
+            <span class="logo-bracket">&lt;</span>Asiddeen<span class="logo-bracket">/&gt;</span>
+        </a>
+        
+        <div class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-      <div class="nav-social">
-        <ul>
-          <li><a href="https://github.com/asiddeen" target="_blank"><i class="ion-social-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/asiddeen" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-          <li><a href="https://www.facebook.com/asiddeen" target="_blank"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="https://www.twitter.com/asiddeen" target="_blank"><i class="ion-social-twitter"></i></a></li>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-socials">
+                <a href="https://github.com/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-github"></i></a>
+                <a href="https://www.linkedin.com/in/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-linkedin"></i></a>
+                <a href="https://www.twitter.com/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-twitter"></i></a>
+            </li>
         </ul>
-      </div>
+    </nav>
 
-      <p class="copyright-text">Copyright 2017 Abubakar Sadiq Isa</p>
-    </div>
-
-    <div class="main">
-      <section class="split-home">
-        <section class="left-section wow fadeIn" data-wow-delay="0.1s"></section>
-        <section class="right-section">
-          <a href="/" class="logo hidden-xs hidden-sm"><img src="assets/images/logo.png" width="35" height="35" alt="Logo" /></a>
-          <div class="intro-personal">
-            <div class="intro-text">
-              <h1 class="wow fadeInDown" data-wow-delay=".1s">Hi, <br>I'm a freelance <br> Ionic Framework<br> Mobile App Developer.</h1>
-              <a href="portfolio.html" class="btn-contact wow fadeIn" data-wow-delay=".2s">Check-out My Work</a>
+    <main class="container">
+        
+        <section class="hero-section">
+            <div class="terminal-window fade-in-up">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">bash — 80x24</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="code-line">
+                        <span class="prompt">asiddeen@dev:~$</span> 
+                        <span class="typing-effect">whoami</span>
+                    </p>
+                    <div class="output-block">
+                        <h1>Hi, I'm Abubakar.</h1>
+                        <p class="role-text">
+                            I build <span class="highlight">Ionic Hybrid Apps</span><br>
+                            & <span class="highlight">Angular Web Platforms</span>.
+                        </p>
+                    </div>
+                    <p class="code-line">
+                        <span class="prompt">asiddeen@dev:~$</span> 
+                        <span class="cursor">_</span>
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="footer-personal text-center">
-            <ul>
-              <li><a href="about.html">About me</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <br>
-            <span class="footer-credits">© Copyright 2017 - Abubakar Sadiq Isa</span>
-          </div>
+
+            <div class="cta-group fade-in-up" style="animation-delay: 0.2s;">
+                <a href="portfolio.html" class="btn btn-primary">View Projects</a>
+                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+            </div>
         </section>
-      </section>
-    </div>
 
-  </div>
+        <section class="tech-stack fade-in-up" style="animation-delay: 0.4s;">
+            <div class="stack-item" title="Ionic Framework">
+                <i class="ion-iphone"></i> <span>Ionic</span>
+            </div>
+            <div class="stack-item" title="Angular">
+                <i class="ion-social-angular" style="color: #dd0031;"></i> <span>Angular</span>
+            </div>
+            <div class="stack-item" title="TypeScript">
+                <i class="ion-code" style="color: #3178c6;"></i> <span>TypeScript</span>
+            </div>
+            <div class="stack-item" title="Node.js">
+                <i class="ion-social-nodejs" style="color: #6cc24a;"></i> <span>Node</span>
+            </div>
+        </section>
 
-  <!-- Jquery and Js Plugins -->
-  <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
-  <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="assets/js/jplugins.js"></script>
-  <script type="text/javascript" src="assets/js/menu.js"></script>
-  <script type="text/javascript" src="assets/js/contact.js"></script>
-  <script type="text/javascript" src="assets/js/validator.js"></script>
-  <script type="text/javascript" src="assets/js/custom.js"></script>
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
