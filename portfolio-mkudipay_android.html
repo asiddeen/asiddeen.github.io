@@ -1,152 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>mKudiPay Case Study | Abubakar Sadiq Isa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Case study of mKudiPay, a secure mobile payment application built with Ionic Framework and Angular.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/logo.png">
+  <meta charset="utf-8">
+  <title>mKudiPay Case Study | Abubakar Sadiq Isa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Case study of mKudiPay, a secure mobile payment application built with Ionic Framework and Angular.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png">
 </head>
+
 <body>
 
-    <nav class="navbar glass-effect">
-        <div class="nav-container">
-            <a href="/" class="logo" aria-label="Home">
-                <span class="logo-symbol">/</span>Asiddeen
+  <nav class="navbar glass-effect">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Home">
+        <span class="logo-symbol">/</span>Asiddeen
+      </a>
+
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Work</a></li>
+        <li><a href="about.html" class="nav-link">Expertise</a></li>
+        <li><a href="contact.html" class="btn btn-sm btn-primary">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header">
+      <div class="container fade-in-up">
+        <a href="portfolio.html" class="back-link"><i class="ion-arrow-left-c"></i> Back to Projects</a>
+        <h1 class="page-title">mKudiPay <span class="text-gradient">Mobile</span></h1>
+        <p class="page-subtitle">
+          A secure, cross-platform fintech solution facilitating seamless mobile money transactions and bill payments.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding pt-0">
+      <div class="container">
+
+        <div class="case-study-hero mobile-spotlight fade-in-up delay-200">
+          <img src="assets/portfolio/mkudipay_android.jpg" alt="mKudiPay App Interface" class="device-screen"
+            loading="lazy">
+        </div>
+
+        <div class="project-meta-grid fade-in-up delay-200">
+          <div class="meta-item">
+            <span class="meta-label">Client</span>
+            <span class="meta-value">Xardtek Ltd.</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Lead Mobile Engineer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Platform</span>
+            <span class="meta-value">Android / Hybrid</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Live Link</span>
+            <a href="https://play.google.com/store/apps/details?id=com.xardtek.mKudiPay&hl=en" target="_blank"
+              class="meta-link">
+              Google Play <i class="ion-android-open"></i>
             </a>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+          </div>
+        </div>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link active">Work</a></li>
-                <li><a href="about.html" class="nav-link">Expertise</a></li>
-                <li><a href="contact.html" class="btn btn-sm btn-primary">Hire Me</a></li>
+      </div>
+    </section>
+
+    <section class="section-padding bg-alt">
+      <div class="container">
+        <div class="case-study-content fade-in-up">
+
+          <div class="content-block">
+            <h2>The Challenge</h2>
+            <p>
+              Xardtek needed a robust mobile payment interface that could handle secure transactions while providing a
+              smooth user experience on a wide range of Android devices. The challenge was to ensure high performance
+              and strict security compliance within a hybrid application environment, maintaining a "native" feel for
+              users accustomed to standard banking apps.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>The Solution</h2>
+            <p>
+              I architected the application using the <strong>Ionic Framework</strong> to leverage cross-platform
+              capabilities while maintaining a single codebase.
+            </p>
+            <ul class="feature-list">
+              <li><strong>Secure State Management:</strong> Implemented robust data handling to ensure sensitive
+                transaction details were never exposed or cached insecurely.</li>
+              <li><strong>Hardware Integration:</strong> Utilized Capacitor plugins to access native device features
+                like Biometrics and Camera for QR scanning.</li>
+              <li><strong>Optimized Performance:</strong> Minimized the app bundle size and optimized Angular change
+                detection strategies to ensure 60fps scrolling on lower-end devices.</li>
             </ul>
+          </div>
+
+          <div class="content-block">
+            <h2>Tech Stack</h2>
+            <div class="stack-tags">
+              <span>Ionic Framework</span>
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>Sass</span>
+              <span>RESTful APIs</span>
+            </div>
+          </div>
+
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main>
-        
-        <section class="page-header">
-            <div class="container fade-in-up">
-                <a href="portfolio.html" class="back-link"><i class="ion-arrow-left-c"></i> Back to Projects</a>
-                <h1 class="page-title">mKudiPay <span class="text-gradient">Mobile</span></h1>
-                <p class="page-subtitle">
-                    A secure, cross-platform fintech solution facilitating seamless mobile money transactions and bill payments.
-                </p>
-            </div>
-        </section>
-
-        <section class="section-padding pt-0">
-            <div class="container">
-                
-                <div class="case-study-hero mobile-showcase fade-in-up delay-200">
-                    <img src="assets/portfolio/mkudipay_android.jpg" alt="mKudiPay App Interface" loading="lazy">
-                </div>
-
-                <div class="project-meta-grid fade-in-up delay-200">
-                    <div class="meta-item">
-                        <span class="meta-label">Client</span>
-                        <span class="meta-value">Xardtek Ltd.</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Role</span>
-                        <span class="meta-value">Lead Mobile Engineer</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Platform</span>
-                        <span class="meta-value">Android / Hybrid</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Live Link</span>
-                        <a href="https://play.google.com/store/apps/details?id=com.xardtek.mKudiPay&hl=en" target="_blank" class="meta-link">
-                            Google Play <i class="ion-android-open"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section-padding bg-alt">
-            <div class="container">
-                <div class="case-study-content fade-in-up">
-                    
-                    <div class="content-block">
-                        <h2>The Challenge</h2>
-                        <p>
-                            Xardtek needed a robust mobile payment interface that could handle secure transactions while providing a smooth user experience on a wide range of Android devices. The challenge was to ensure high performance and strict security compliance within a hybrid application environment, maintaining a "native" feel for users accustomed to standard banking apps.
-                        </p>
-                    </div>
-
-                    <div class="content-block">
-                        <h2>The Solution</h2>
-                        <p>
-                            I architected the application using the <strong>Ionic Framework</strong> to leverage cross-platform capabilities while maintaining a single codebase.
-                        </p>
-                        <ul class="feature-list">
-                            <li><strong>Secure State Management:</strong> Implemented robust data handling to ensure sensitive transaction details were never exposed or cached insecurely.</li>
-                            <li><strong>Hardware Integration:</strong> Utilized Capacitor plugins to access native device features like Biometrics and Camera for QR scanning.</li>
-                            <li><strong>Optimized Performance:</strong> Minimized the app bundle size and optimized Angular change detection strategies to ensure 60fps scrolling on lower-end devices.</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-block">
-                        <h2>Tech Stack</h2>
-                        <div class="stack-tags">
-                            <span>Ionic Framework</span>
-                            <span>Angular</span>
-                            <span>TypeScript</span>
-                            <span>Sass</span>
-                            <span>RESTful APIs</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding text-center">
-            <div class="container fade-in-up">
-                <p class="cta-text">Ready to see more?</p>
-                <div class="cta-group justify-center">
-                    <a href="portfolio.html" class="btn btn-secondary">All Projects</a>
-                    <a href="portfolio-charitylife_android.html" class="btn btn-primary">Next Case Study <i class="ion-arrow-right-c"></i></a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <span class="logo footer-logo">Asiddeen</span>
-                <p class="footer-desc">Crafting digital experiences with precision and code.</p>
-            </div>
-            <div class="footer-col text-right">
-                <div class="social-links">
-                    <a href="https://github.com/asiddeen" target="_blank"><i class="ion-social-github"></i></a>
-                    <a href="https://www.linkedin.com/in/asiddeen" target="_blank"><i class="ion-social-linkedin"></i></a>
-                    <a href="https://www.twitter.com/asiddeen" target="_blank"><i class="ion-social-twitter"></i></a>
-                </div>
-                <p id="copyright" class="copyright-text"></p>
-            </div>
+    <section class="section-padding text-center">
+      <div class="container fade-in-up">
+        <p class="cta-text">Ready to see more?</p>
+        <div class="cta-group justify-center">
+          <a href="portfolio.html" class="btn btn-secondary">All Projects</a>
+          <a href="portfolio-charitylife_android.html" class="btn btn-primary">Next Case Study <i
+              class="ion-arrow-right-c"></i></a>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="assets/js/main.js"></script>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <span class="logo footer-logo">Asiddeen</span>
+        <p class="footer-desc">Crafting digital experiences with precision and code.</p>
+      </div>
+      <div class="footer-col text-right">
+        <div class="social-links">
+          <a href="https://github.com/asiddeen" target="_blank"><i class="ion-social-github"></i></a>
+          <a href="https://www.linkedin.com/in/asiddeen" target="_blank"><i class="ion-social-linkedin"></i></a>
+          <a href="https://www.twitter.com/asiddeen" target="_blank"><i class="ion-social-twitter"></i></a>
+        </div>
+        <p id="copyright" class="copyright-text"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
