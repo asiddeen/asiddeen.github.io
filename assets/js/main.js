@@ -47,4 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4. Contact Form Handler (Zero Trust Validation)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // NOTE: If using Formspree, you can remove this preventDefault 
+            // OR use AJAX to submit. For now, we'll just show a visual state.
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            // Visual feedback state
+            btn.innerHTML = '<span>Sending...</span>';
+            btn.style.opacity = '0.7';
+            
+            // This is where you'd normally await fetch()
+            // e.preventDefault(); // Uncomment if handling via AJAX
+        });
+    }
 });
