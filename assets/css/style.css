@@ -519,31 +519,50 @@ footer {
 /* --- Card Image & Overlay --- */
 .card-image {
     position: relative;
-    height: 220px; /* Fixed height for consistency */
+    height: 240px; /* Increased slightly for better visibility */
     overflow: hidden;
-    background: #0f172a;
+    background: #0f172a; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Default Image Style (Perfect for Web/Desktop Screenshots) */
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    object-fit: cover;          /* Fills the box */
+    object-position: top center; /* ENSURES HEADERS AREN'T CUT OFF */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.project-card.mobile-showcase .card-image {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%); /* Premium Gradient Background */
+    padding: 15px; /* Spacing so image isn't touching edges */
+}
+
+.project-card.mobile-showcase .card-image img {
+    object-fit: contain; /* Shows WHOLE image, no cropping */
+    width: auto;         /* Allow natural width */
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Adds depth/3D feel */
+    border-radius: 6px; /* Smooth corners like a phone */
+}
+
+/* Hover Effects */
 .project-card:hover .card-image img {
-    transform: scale(1.05);
+    transform: scale(1.03); /* Subtle zoom */
 }
 
 .card-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(15, 23, 42, 0.9); /* Darker for better text readability */
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     backdrop-filter: blur(4px);
 }
 
