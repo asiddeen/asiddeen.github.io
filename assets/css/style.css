@@ -99,7 +99,7 @@ ul { list-style: none; }
 }
 
 .terminal-buttons { display: flex; gap: 8px; }
-.dot { width: 12px; height: 12px; rounded: 50%; border-radius: 50%; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
 .red { background: var(--danger); }
 .yellow { background: var(--warning); }
 .green { background: var(--success); }

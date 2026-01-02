@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * Performance Optimization:
- * Intersection Observer for scroll animations instead of heavy libraries.
+ * Intersection Observer for scroll animations instead of heavy libraries like WOW.js
  */
 const observerOptions = {
     threshold: 0.1
@@ -58,7 +58,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target); // Run once
+            observer.unobserve(entry.target); // Run once to save battery
         }
     });
 }, observerOptions);
