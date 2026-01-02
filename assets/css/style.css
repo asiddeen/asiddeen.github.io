@@ -624,3 +624,161 @@ footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; backg
     .timeline-item:nth-child(even)::before { left: -17px; }
     .timeline-item:nth-child(odd) { text-align: right; }
 }
+
+
+/* --- Single Case Study Styles --- */
+
+.back-link {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.back-link:hover { color: var(--primary); }
+
+.pt-0 { padding-top: 0; }
+.justify-center { justify-content: center; }
+
+/* Case Study Hero (The "Big Image") */
+.case-study-hero {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-subtle);
+}
+
+/* Reusing the "Mobile Showcase" logic from Portfolio Grid */
+.case-study-hero.mobile-showcase {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 40px;
+    height: auto;
+    min-height: 400px;
+}
+
+.case-study-hero.mobile-showcase img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px; /* Cap height so it doesn't take over screen */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-radius: 12px;
+}
+
+/* Project Meta Data Grid */
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.meta-value {
+    color: var(--text-main);
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.meta-link {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.meta-link:hover { text-decoration: underline; }
+
+/* Content Typography */
+.case-study-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-block { margin-bottom: 60px; }
+
+.content-block h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    border-left: 4px solid var(--primary);
+    padding-left: 20px;
+}
+
+.content-block p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.feature-list strong { color: var(--text-main); }
+
+/* Stack Tags (Large) */
+.stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.stack-tags span {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .case-study-hero.mobile-showcase { padding: 20px; }
+    .project-meta-grid { grid-template-columns: 1fr 1fr; }
+    .content-block h2 { font-size: 1.5rem; }
+}
