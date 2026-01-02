@@ -2,98 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Abubakar Sadiq Isa | Ionic & Angular Developer</title>
+    <title>Abubakar Sadiq Isa | Senior Ionic & Angular Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Freelance Ionic Framework & Angular Mobile App Developer based in Ghana.">
+    <meta name="description" content="Senior Ionic & Angular Engineer delivering enterprise-grade mobile and web solutions. Based in Ghana.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="/" class="logo" aria-label="Home">
-            <span class="logo-bracket">&lt;</span>Asiddeen<span class="logo-bracket">/&gt;</span>
-        </a>
-        
-        <div class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Home">
+                <span class="logo-symbol">/</span>Asiddeen
+            </a>
+            
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="nav-socials">
-                <a href="https://github.com/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-github"></i></a>
-                <a href="https://www.linkedin.com/in/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-linkedin"></i></a>
-                <a href="https://www.twitter.com/asiddeen" target="_blank" rel="noopener noreferrer"><i class="ion-social-twitter"></i></a>
-            </li>
-        </ul>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link">Work</a></li>
+                <li><a href="about.html" class="nav-link">Expertise</a></li>
+                <li><a href="contact.html" class="btn btn-sm btn-primary">Hire Me</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="container">
+    <main>
         
         <section class="hero-section">
-            <div class="terminal-window fade-in-up">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="terminal-title">bash — 80x24</span>
+            <div class="hero-content fade-in-up">
+                <div class="badge-pill">
+                    <span class="dot-indicator"></span> Available for new projects
                 </div>
-                <div class="terminal-body">
-                    <p class="code-line">
-                        <span class="prompt">asiddeen@dev:~$</span> 
-                        <span class="typing-effect">whoami</span>
-                    </p>
-                    <div class="output-block">
-                        <h1>Hi, I'm Abubakar.</h1>
-                        <p class="role-text">
-                            I build <span class="highlight">Ionic Hybrid Apps</span><br>
-                            & <span class="highlight">Angular Web Platforms</span>.
-                        </p>
-                    </div>
-                    <p class="code-line">
-                        <span class="prompt">asiddeen@dev:~$</span> 
-                        <span class="cursor">_</span>
-                    </p>
+                <h1 class="hero-title">
+                    Building robust <span class="text-gradient">Hybrid Mobile</span> & Web Architectures.
+                </h1>
+                <p class="hero-subtitle">
+                    I engineer high-performance applications using <strong>Ionic</strong> and <strong>Angular</strong>. strictly adhering to Zero Trust coding principles and optimized for enterprise scalability.
+                </p>
+                <div class="cta-group">
+                    <a href="portfolio.html" class="btn btn-primary">View Case Studies</a>
+                    <a href="https://github.com/asiddeen" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="ion-social-github"></i> GitHub
+                    </a>
                 </div>
             </div>
 
-            <div class="cta-group fade-in-up" style="animation-delay: 0.2s;">
-                <a href="portfolio.html" class="btn btn-primary">View Projects</a>
-                <a href="contact.html" class="btn btn-outline">Contact Me</a>
+            <div class="hero-visual fade-in-up delay-200">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="window-title">stack_info.json</div>
+                    </div>
+                    <div class="terminal-body">
+                        <pre><code class="language-json"><span class="key">"engineer"</span>: {
+  <span class="key">"name"</span>: <span class="string">"Abubakar Sadiq"</span>,
+  <span class="key">"role"</span>: <span class="string">"Senior Developer"</span>,
+  <span class="key">"stack"</span>: [
+    <span class="string">"Ionic Framework"</span>,
+    <span class="string">"Angular 18+"</span>,
+    <span class="string">"TypeScript"</span>,
+    <span class="string">"RxJS"</span>,
+    <span class="string">"Node.js"</span>
+  ],
+  <span class="key">"location"</span>: <span class="string">"Ghana"</span>
+}</code></pre>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="tech-stack fade-in-up" style="animation-delay: 0.4s;">
-            <div class="stack-item" title="Ionic Framework">
-                <i class="ion-iphone"></i> <span>Ionic</span>
-            </div>
-            <div class="stack-item" title="Angular">
-                <i class="ion-social-angular" style="color: #dd0031;"></i> <span>Angular</span>
-            </div>
-            <div class="stack-item" title="TypeScript">
-                <i class="ion-code" style="color: #3178c6;"></i> <span>TypeScript</span>
-            </div>
-            <div class="stack-item" title="Node.js">
-                <i class="ion-social-nodejs" style="color: #6cc24a;"></i> <span>Node</span>
+        <section class="stack-section fade-in-up delay-400">
+            <p class="section-label">Core Technologies</p>
+            <div class="tech-grid">
+                <div class="tech-item" title="Ionic"><i class="ion-iphone"></i> <span>Ionic</span></div>
+                <div class="tech-item" title="Angular"><i class="ion-social-angular"></i> <span>Angular</span></div>
+                <div class="tech-item" title="TypeScript"><i class="ion-code"></i> <span>TypeScript</span></div>
+                <div class="tech-item" title="Sass"><i class="ion-social-sass"></i> <span>Sass</span></div>
+                <div class="tech-item" title="Node.js"><i class="ion-social-nodejs"></i> <span>Node.js</span></div>
             </div>
         </section>
 
     </main>
 
     <footer>
-        <p id="copyright"></p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <span class="logo footer-logo">Asiddeen</span>
+                <p class="footer-desc">Crafting digital experiences with precision and code.</p>
+            </div>
+            <div class="footer-col text-right">
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="ion-social-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ion-social-twitter"></i></a>
+                </div>
+                <p id="copyright" class="copyright-text"></p>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
