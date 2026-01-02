@@ -67,6 +67,8 @@ ul { list-style: none; }
 
 .section-padding { padding: 80px 0; }
 .bg-alt { background: #162032; }
+.pt-0 { padding-top: 0; }
+.justify-center { justify-content: center; }
 
 /* --- Buttons --- */
 .btn {
@@ -450,7 +452,122 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   8. CONTACT PAGE (Enterprise Layout)
+   8. CASE STUDY PAGE COMPONENTS
+   ========================================= */
+.back-link {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.back-link:hover { color: var(--primary); }
+
+/* Case Study Hero (Device Mockup) */
+.case-study-hero {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+}
+
+.case-study-hero.mobile-spotlight {
+    background: radial-gradient(circle at center, #334155 0%, #0f172a 70%);
+    padding: 60px 20px;
+    min-height: 500px;
+}
+
+.device-screen {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    width: auto;
+    
+    /* Phone Bezel */
+    border: 12px solid #121212;
+    border-radius: 30px;
+    box-shadow: 
+        0 0 0 2px #333,
+        0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 2;
+}
+
+/* Project Meta Data Grid */
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.meta-item { display: flex; flex-direction: column; gap: 8px; }
+
+.meta-label {
+    font-size: 0.75rem; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 600; letter-spacing: 1px;
+}
+
+.meta-value {
+    color: var(--text-main); font-family: var(--font-ui);
+    font-weight: 500; font-size: 1rem;
+}
+
+.meta-link {
+    color: var(--primary); font-weight: 600;
+    display: inline-flex; align-items: center; gap: 6px;
+}
+.meta-link:hover { text-decoration: underline; }
+
+/* Case Study Content */
+.case-study-content { max-width: 800px; margin: 0 auto; }
+.content-block { margin-bottom: 60px; }
+
+.content-block h2 {
+    font-size: 1.75rem; margin-bottom: 20px;
+    color: var(--text-main); border-left: 4px solid var(--primary);
+    padding-left: 20px;
+}
+
+.content-block p {
+    font-size: 1.05rem; color: var(--text-muted);
+    line-height: 1.8; margin-bottom: 20px;
+}
+
+/* Feature List */
+.feature-list { list-style: none; margin-top: 20px; }
+.feature-list li {
+    position: relative; padding-left: 30px; margin-bottom: 15px;
+    color: var(--text-muted); font-size: 1rem;
+}
+.feature-list li::before {
+    content: '✓'; position: absolute; left: 0;
+    color: var(--success); font-weight: bold;
+}
+.feature-list strong { color: var(--text-main); }
+
+/* Stack Tags (Large) */
+.stack-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+.stack-tags span {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--primary); padding: 8px 16px;
+    border-radius: 100px; font-family: var(--font-code);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   9. CONTACT PAGE (Enterprise Layout)
    ========================================= */
 .contact-wrapper {
     display: grid;
@@ -563,7 +680,7 @@ textarea.form-input { min-height: 140px; resize: vertical; padding-top: 16px; }
 .form-input:not(:placeholder-shown):invalid { border-color: rgba(248, 113, 113, 0.5); }
 
 /* =========================================
-   9. FOOTER
+   10. FOOTER
    ========================================= */
 footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; background: var(--bg-body); }
 .footer-container { display: flex; justify-content: space-between; align-items: flex-end; }
@@ -575,7 +692,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; backg
 .social-links a:hover { color: var(--primary); }
 
 /* =========================================
-   10. ANIMATIONS
+   11. ANIMATIONS
    ========================================= */
 .fade-in-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
 .delay-200 { animation-delay: 0.2s; }
@@ -583,7 +700,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; backg
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* =========================================
-   11. RESPONSIVE UTILITIES
+   12. RESPONSIVE UTILITIES
    ========================================= */
 @media (max-width: 900px) {
     .hero-section { grid-template-columns: 1fr; padding-top: 100px; text-align: center; }
@@ -609,10 +726,14 @@ footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; backg
     .footer-container { flex-direction: column; align-items: center; text-align: center; gap: 30px; }
     .social-links { justify-content: center; }
     
-    .timeline::before { left: 50%; } /* Center timeline on mobile too if preferred, or adjust */
+    .timeline::before { left: 50%; } 
     
-    /* Adjustments for Timeline Mobile vs Desktop */
-    /* Note: Mobile usually keeps left alignment, Desktop splits. */
+    .project-meta-grid { grid-template-columns: 1fr 1fr; }
+    .content-block h2 { font-size: 1.5rem; }
+
+    /* Device Mockup Tweaks */
+    .case-study-hero.mobile-spotlight { padding: 40px 15px; min-height: 300px; }
+    .device-screen { border-width: 8px; border-radius: 20px; }
 }
 
 /* Desktop Timeline Logic */
@@ -623,298 +744,4 @@ footer { border-top: 1px solid var(--border-subtle); padding: 60px 0 30px; backg
     .timeline-item:nth-child(even) { margin-left: 50%; padding-right: 0; padding-left: 40px; }
     .timeline-item:nth-child(even)::before { left: -17px; }
     .timeline-item:nth-child(odd) { text-align: right; }
-}
-
-
-/* --- Single Case Study Styles --- */
-
-.back-link {
-    display: inline-block;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-.back-link:hover { color: var(--primary); }
-
-.pt-0 { padding-top: 0; }
-.justify-center { justify-content: center; }
-
-/* Case Study Hero (The "Big Image") */
-.case-study-hero {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    background: #0f172a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--border-subtle);
-}
-
-/* Reusing the "Mobile Showcase" logic from Portfolio Grid */
-.case-study-hero.mobile-showcase {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    padding: 40px;
-    height: auto;
-    min-height: 400px;
-}
-
-.case-study-hero.mobile-showcase img {
-    max-width: 100%;
-    height: auto;
-    max-height: 500px; /* Cap height so it doesn't take over screen */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border-radius: 12px;
-}
-
-/* Project Meta Data Grid */
-.project-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
-.meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.meta-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.meta-value {
-    color: var(--text-main);
-    font-family: var(--font-ui);
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.meta-link {
-    color: var(--primary);
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-.meta-link:hover { text-decoration: underline; }
-
-/* Content Typography */
-.case-study-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.content-block { margin-bottom: 60px; }
-
-.content-block h2 {
-    font-size: 1.75rem;
-    margin-bottom: 20px;
-    color: var(--text-main);
-    border-left: 4px solid var(--primary);
-    padding-left: 20px;
-}
-
-.content-block p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Feature List */
-.feature-list {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.feature-list li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 15px;
-    color: var(--text-muted);
-    font-size: 1rem;
-}
-
-.feature-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--success);
-    font-weight: bold;
-}
-
-.feature-list strong { color: var(--text-main); }
-
-/* Stack Tags (Large) */
-.stack-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.stack-tags span {
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    color: var(--primary);
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-family: var(--font-code);
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .case-study-hero.mobile-showcase { padding: 20px; }
-    .project-meta-grid { grid-template-columns: 1fr 1fr; }
-    .content-block h2 { font-size: 1.5rem; }
-}
-
-
-/* --- Refined Case Study Hero --- */
-
-.back-link {
-    display: inline-block;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-.back-link:hover { color: var(--primary); }
-
-.pt-0 { padding-top: 0; }
-.justify-center { justify-content: center; }
-
-/* The Container (The Stage) */
-.case-study-hero {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    background: #0f172a; /* Fallback */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--border-subtle);
-    position: relative;
-}
-
-/* Mobile Spotlight Variant */
-.case-study-hero.mobile-spotlight {
-    /* Premium Radial Gradient (Spotlight Effect) */
-    background: radial-gradient(circle at center, #334155 0%, #0f172a 70%);
-    padding: 60px 20px; /* More padding to let the device breathe */
-    min-height: 500px;
-}
-
-/* The Image (The Device) */
-.device-screen {
-    max-width: 100%;
-    height: auto;
-    max-height: 600px; /* Cap height for large screens */
-    width: auto;
-    
-    /* THE PHONE BEZEL MAGIC */
-    border: 12px solid #121212; /* The physical frame */
-    border-radius: 30px;        /* The rounded corners of a modern phone */
-    box-shadow: 
-        0 0 0 2px #333,             /* Subtle outer hardware rim */
-        0 25px 50px -12px rgba(0, 0, 0, 0.8); /* Deep shadow to make it float */
-        
-    /* Screen Glare (Subtle) */
-    position: relative;
-    z-index: 2;
-}
-
-/* Responsive Tweak for Mobile Devices */
-@media (max-width: 600px) {
-    .case-study-hero.mobile-spotlight {
-        padding: 40px 15px;
-        min-height: 300px;
-    }
-    
-    .device-screen {
-        border-width: 8px; /* Thinner bezel on small screens */
-        border-radius: 20px;
-    }
-}
-
-/* --- Metadata Grid (Kept consistent) --- */
-.project-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
-.meta-item { display: flex; flex-direction: column; gap: 8px; }
-
-.meta-label {
-    font-size: 0.75rem; text-transform: uppercase;
-    color: var(--text-muted); font-weight: 600; letter-spacing: 1px;
-}
-
-.meta-value {
-    color: var(--text-main); font-family: var(--font-ui);
-    font-weight: 500; font-size: 1rem;
-}
-
-.meta-link {
-    color: var(--primary); font-weight: 600;
-    display: inline-flex; align-items: center; gap: 6px;
-}
-.meta-link:hover { text-decoration: underline; }
-
-/* --- Content Typography --- */
-.case-study-content { max-width: 800px; margin: 0 auto; }
-.content-block { margin-bottom: 60px; }
-
-.content-block h2 {
-    font-size: 1.75rem; margin-bottom: 20px;
-    color: var(--text-main); border-left: 4px solid var(--primary);
-    padding-left: 20px;
-}
-
-.content-block p {
-    font-size: 1.05rem; color: var(--text-muted);
-    line-height: 1.8; margin-bottom: 20px;
-}
-
-/* Feature List */
-.feature-list { list-style: none; margin-top: 20px; }
-.feature-list li {
-    position: relative; padding-left: 30px; margin-bottom: 15px;
-    color: var(--text-muted); font-size: 1rem;
-}
-.feature-list li::before {
-    content: '✓'; position: absolute; left: 0;
-    color: var(--success); font-weight: bold;
-}
-.feature-list strong { color: var(--text-main); }
-
-/* Stack Tags */
-.stack-tags { display: flex; flex-wrap: wrap; gap: 12px; }
-.stack-tags span {
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    color: var(--primary); padding: 8px 16px;
-    border-radius: 100px; font-family: var(--font-code);
-    font-size: 0.9rem;
 }
